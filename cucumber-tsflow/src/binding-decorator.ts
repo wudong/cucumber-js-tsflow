@@ -157,7 +157,7 @@ function bindStepDefinition(stepBinding: StepBinding): void {
           )} (${matchingStepBinding.callsite.toString()})\n`;
       });
 
-      return new Error(message);
+      throw new Error(message);
     }
 
     const contextTypes = bindingRegistry.getContextTypesForTarget(
